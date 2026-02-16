@@ -1,4 +1,4 @@
-# 🔐 DARKCIPHER VAULT
+# 🔐 CIPHER VAULT
 
 > Secure client-side encryption platform with one-time vault codes
 
@@ -356,7 +356,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 For issues or questions:
-- Open an [Issue](https://github.com/your-Rehan Naveed/darkcipher-vault/issues)
+- Open an [Issue](https://github.com/your-Rehan Naveed/cipher-vault/issues)
 - Email: toku7balls@gmail.com
 
 ---
