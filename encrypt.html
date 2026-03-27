@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cipher VAULT | Encrypt</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo"><h1>Cipher VAULT</h1></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="decrypt.html">Decrypt</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+<section class="encrypt-section">
+    <h2>🔐 Encrypt Your Data</h2>
+    
+    <form onsubmit="event.preventDefault(); encryptData();">
+        
+        <div class="form-group">
+            <label for="plainText">📝 Text to Encrypt</label>
+            <textarea id="plainText" rows="6" placeholder="Enter text..."></textarea>
+        </div>
+
+        <div style="text-align: center; margin: 20px 0; color: #a020f0; font-weight: bold;">— OR —</div>
+
+        <div class="form-group">
+            <label for="fileInput">📁 Upload File</label>
+            <input type="file" id="fileInput">
+        </div>
+
+        <div class="form-group">
+    <label for="passphrase">🔑 Encryption Passphrase</label>
+    <input 
+        type="password" 
+        id="passphrase" 
+        maxlength="5" 
+        placeholder=" Enter a 5 character passkey"
+        required>
+    <small>Exactly 5 characters. Use letters, numbers, or combination (e.g., abc12).</small>
+</div>
+
+        <button type="submit" class="btn-primary">🔒 Encrypt Now</button>
+    </form>
+
+    <section class="result-section">
+        <h3>✅ Result</h3>
+        <div class="vault-code-section">
+            <h4>🔑 Vault Code</h4>
+            <div class="result-box" id="vaultCode">—</div>
+            <button onclick="copyVaultCode()" type="button" class="btn-secondary">📋 Copy</button>
+        </div>
+        <div class="encrypted-data-section">
+            <h4>🔐 Encrypted Output</h4>
+            <div class="result-box" id="encryptedResult">Output will appear here.</div>
+        </div>
+    </section>
+
+</section>
+</main>
+
+<footer class="footer">
+    <p>© 2026 CIPHER VAULT</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+<script src="assets/js/vaultDB.js"></script>
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>
