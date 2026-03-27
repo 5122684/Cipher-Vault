@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CIPHER VAULT | Decrypt Data</title>
+
+    <meta name="description" content="Decrypt text or files securely using CIPHER VAULT client-side encryption and one-time codes.">
+    <meta name="author" content="Rehan Naveed">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>CIPHER VAULT</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="encrypt.html">Encrypt</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ================= MAIN ================= -->
+<main>
+<section class="decrypt-section">
+
+    <h2>🔓 Decrypt Your Data</h2>
+    <p class="section-description">
+        Enter the vault code provided by the sender along with the correct passphrase
+        to decrypt your text or file securely. The code can only be used once.
+    </p>
+
+    <!-- ================= DECRYPT FORM ================= -->
+    <form onsubmit="event.preventDefault(); decryptData();">
+
+        <!-- VAULT CODE INPUT -->
+        <div class="form-group">
+            <label for="inputCode">🔑 Vault Code</label>
+            <input 
+                type="text" 
+                id="inputCode" 
+                placeholder="Enter 5-character vault code (e.g., A8B2C9)" 
+                maxlength="6"
+                required>
+            <small>Provided by the sender. Case-insensitive.</small>
+        </div>
+
+        <!-- PASSPHRASE INPUT -->
+     <div class="form-group">
+    <label for="decryptPassphrase">🔑 Decryption Passphrase</label>
+    <input 
+        type="password" 
+        id="decryptPassphrase" 
+        maxlength="5" 
+        placeholder="e.g., abc12, xyz99, 12345"
+        required>
+    <small>Same 5-character passphrase used during encryption. Letters, numbers, or combination.</small>
+</div>
+
+        <!-- DECRYPT BUTTON -->
+        <button type="submit" class="btn-primary">
+            🔓 Decrypt Now
+        </button>
+
+    </form>
+
+    <!-- ================= RESULT SECTION ================= -->
+    <section class="result-section">
+        <h3>✅ Decryption Result</h3>
+
+        <p class="info-text">
+            Your decrypted text or file will appear here after successful verification.
+        </p>
+
+        <div class="result-box" id="decryptedResult">
+            Decrypted output will be displayed here.
+        </div>
+    </section>
+
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <p>© 2026 CIPHER VAULT | Secure Client-Side Encryption</p>
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+<script src="assets/js/vaultDB.js"></script>
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>
